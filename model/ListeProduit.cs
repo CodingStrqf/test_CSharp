@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace ListeDeCourse.model
 {
-    internal interface ListeProduit
+    internal interface ListeCourseAbstract
     {
-        void AfficherListeProduit();
-        bool AjouterCourse();
-        bool SupprimerProduit();
+        void AfficherListeCourse();
+        bool AjouterCourse(Course c);
+        bool SupprimerCourse(string nomProduit);
         
     }
 }

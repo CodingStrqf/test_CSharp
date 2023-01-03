@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ListeDeCourse.model
 {
-    internal class ListeCourse : ListeProduit
+    internal class ListeCourse : ListeCourseAbstract
     {
         private String nom;
         private List<Course> listeCourses;
@@ -17,20 +17,40 @@ namespace ListeDeCourse.model
             this.listeCourses = new List<Course>();
         }
 
-        public void AfficherListeProduit()
+        public void AfficherListeCourse()
         {
-            throw new NotImplementedException();
+            foreach(Course course in listeCourses)
+            {
+                Console.WriteLine(course.ToString());
+            }
         }
 
-        public bool AjouterCourse()
+        public bool AjouterCourse(Course c)
         {
-            throw new NotImplementedException();
+            listeCourses.Add(c);
+            return true;
         }
 
-        public bool SupprimerProduit()
+        public bool SupprimerCourse(string nomProduit)
         {
-            throw new NotImplementedException();
+            foreach (Course course in listeCourses)
+            {
+                if( course.getProduit().getNom() == nomProduit)
+                {
+                    listeCourses.Remove(course);
+                    return true;
+                }
+            }
+            return false;
+        }
+        public string getNom()
+        {
+            return nom;
         }
 
+        public List<Course> getListeCourse()
+        {
+            return listeCourses;
+        }
     }
 }

@@ -19,8 +19,8 @@ namespace ListeDeCourse.model
         {
             course = new Course(42, new Produit(01, "saumon", 25));
 
-            if(course.getQuantite() != 42) { Console.WriteLine("La quantité n'est pas bonne"); return false; }
-            if(course.getProduit().getId() != 01) { Console.WriteLine("L'id du produit est pas bon"); return false; }
+            if(course.getQuantite() != 42) { Console.WriteLine("La quantité n'est pas bonne KO"); return false; }
+            if(course.getProduit().getId() != 01) { Console.WriteLine("L'id du produit est pas bon KO"); return false; }
 
             Console.WriteLine("Création d'une course : OK");
 

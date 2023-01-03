@@ -16,6 +16,10 @@ namespace Course
             CourseTest cT = new CourseTest();
             cT.CreerCourse();
 
+            ListeCourseTest lCT = new ListeCourseTest();
+            lCT.CreerListeCourse();
+            lCT.UtilisationListeCourse();
+
             Console.WriteLine("fin");
 
         }
